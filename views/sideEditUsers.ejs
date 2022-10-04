@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr-FR">
+
+<head>
+   <title>Accueil - DOMAP</title>
+   <%- include('partials/dependencies'); %>
+</head>
+
+
+<body>
+   <%- include('partials/navbar'); %>
+      <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5">
+         <div class="container rounded bg-white mt-5 mb-5">
+
+               <form method="POST" action="/configEditUser/<%- sess_docList[0]['_id'] %>">
+               <div class="border-right">
+                  <div class="p-3 py-5">
+                     <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Modification utilisateur</h4>
+                     </div>
+                     <div class="row mt-2">
+                        <div class="col-md-6"><label class="labels">Nom</label>
+                           <input type="text" id="nom" name="nom" class="form-control" placeholder="first name" value="<%- sess_docList[0]['Name'] %>"></div>
+                        <div class="col-md-6"><label class="labels">Prénom</label>
+                           <input type="text" id="prenom" name="prenom" class="form-control" value="<%- sess_docList[0]['Surname'] %>" placeholder=""></div>
+                           
+                     </div>
+                     <div class="row mt-3">
+                        <div class="col-md-12"><label class="labels">Téléphone</label>
+                           <input type="text" id="tel" name="tel" class="form-control" placeholder="enter phone number" value="<%- sess_docList[0]['Contact_no'] %>"></div>
+                           
+   
+                        <div class="col-md-12"><label class="labels">Email</label>
+                           <input type="text" id="email" name="email"  class="form-control" placeholder="enter email id" value="<%- sess_docList[0]['Email'] %>"></div>
+                        </div>
+
+                    
+                        <div class="col-md-"><label class="labels">Societe</label>
+                           <input type="text" id="societe" name="societe"  class="form-control" placeholder="enter email id" value="<%- sess_docList[0]['Company'] %>"></div>
+                     <div class="row mt-3">
+                        <div class="col-md-6">
+                           <label class="labels">Role</label>
+                           <select class="form-control" id="type" name="type" >
+                              <% for (let pas=0; pas < sess_docListRole.length; pas++) { %>
+                                 <% if(sess_type == sess_docListRole[pas]['Name']){ %>
+                              <option selected>
+                                 <%- sess_docListRole[pas]['Name'] %>
+                              </option>
+                              <% }else{ %>
+                                 <option>
+                                    <%- sess_docListRole[pas]['Name'] %>
+                                 </option>
+                              <% }}%>
+
+                           </select>
+
+                        </div>
+                        <div class="col-md-6"><label class="labels">Forfait</label>
+                           <input id="forfait" name="forfait" type="text" class="form-control" value="<%- sess_docList[0]['Forfait'] %>" placeholder="Forfait"></div>
+                     </div>
+                  </form>
+                     <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit">Enregistrer les modifications</button></div>
+
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </div>
+      </div>
+      </div>
+      </div>
+</body>
+
+<%- include('partials/additionalCss'); %>
+
+</html>

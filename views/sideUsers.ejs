@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr-FR">
+
+<head>
+   <title>Gestion des roles - DOMAP</title>
+   <%- include('partials/dependencies'); %>
+</head>
+
+<body>
+   <div class="wrapper d-flex align-items-stretch">
+      <%- include('partials/navbar'); %>
+         <!-- Page Content  -->
+         <div id="content-wrapper" class="p-4 p-md-5 pt-5">
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+               <div class="modal-dialog">
+                  <div class="modal-content">
+
+                     <!-- Modal Header -->
+                     <div class="modal-header">
+                        <h4 class="modal-title">Ajout d'une société :</h4>
+                     </div>
+
+                     <!-- Modal body -->
+                     <div class="modal-body">
+                        <form action="/roleAdd" method="POST">
+                           <div class="form-group">
+                              <label for="socName">Nom de la société :</label>
+                              <input type="text" class="form-control" id="socName" name="socName"
+                                 aria-describedby="socName" placeholder="DOMAP">
+                           </div>
+                     </div>
+
+                     <!-- Modal footer -->
+                     <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Envoyer </button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fermer</button>
+                     </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Button to Open the Modal -->
+            <button type="button" class="btn btn-primary mb-4" data-bs-toggle="modal" data-bs-target="#myModal">
+               Ajouter un utilisateur
+            </button>
+         
+            <div class="card">
+               <h5 class="card-header">Gestion des Utilisateur</h5>
+               <div class="table-responsive text-nowrap">
+                 <table class="table">
+                   <thead>
+                     <tr>
+                        <th>No</th>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>No contacte</th>
+                        <th>Entreprise</th>
+                        <th>Actions</th>
+                     </tr>
+                   </thead>
+                   <tbody class="table-border-bottom-0">
+                     <% for (let pas=0; pas < sess_docList.length; pas++) { %>
+                           <tr>
+                           <td>
+                              <i class="fab fa-angular fa-lg text-danger me-3"></i> 
+                              <strong>   <%- pas %></strong></td>
+                              <td><%- sess_docList[pas]['Name'] %></td>
+
+                           <td>    <%- sess_docList[pas]['Surname'] %> </td>
+                           <td>
+                              <%- sess_docList[pas]['Contact_no'] %>
+                           </td>
+                           <td>
+                              <%- sess_docList[pas]['Company'] %>
+                           </td>
+                           <td>
+                              <div class="dropdown">
+                                 <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                 <i class="bx bx-dots-vertical-rounded"></i>
+                                 </button>
+                                 <div class="dropdown-menu">
+                                 <a class="dropdown-item" href="/usersEdit/<%= sess_docList[pas]['_id'] %>"><i class="bx bx-edit-alt me-1"></i> Modifier</a>
+                                 <a class="dropdown-item" href="/usersDel/<%= sess_docList[pas]['_id'] %>"><i class="bx bx-trash me-1"></i> Supprimer</a>
+                                 </div>
+                              </div>
+                           </td>
+                           </tr>
+                     <% } %>
+                   </tbody>
+                 </table>
+               </div>
+             </div>
+         </div>
+   </body>
+<%- include('partials/additionalCss'); %>
+</html>

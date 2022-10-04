@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr-FR">
+
+<head>
+   <title>Gestion des roles - DOMAP</title>
+   <%- include('partials/dependencies'); %>
+</head>
+
+<body>
+   <div class="wrapper d-flex align-items-stretch">
+      <%- include('partials/navbar'); %>
+         <!-- Page Content  -->
+         <div id="content" class="p-4 p-md-5 pt-5">
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+               <div class="modal-dialog">
+                  <div class="modal-content">
+
+                     <!-- Modal Header -->
+                     <div class="modal-header">
+                        <h4 class="modal-title">Ajout d'une société :</h4>
+                     </div>
+
+                     <!-- Modal body -->
+                     <div class="modal-body">
+                        <form action="/roleAdd" method="POST">
+                           <div class="form-group">
+                              <label for="socName">Nom de la société :</label>
+                              <input type="text" class="form-control" id="socName" name="socName"
+                                 aria-describedby="socName" placeholder="DOMAP">
+                           </div>
+                     </div>
+
+                     <!-- Modal footer -->
+                     <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Envoyer </button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fermer</button>
+                     </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Button to Open the Modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+               Ajouter une société
+            </button>
+
+            <div class="row">
+               <div class="col-12">
+                  <table class="table table-bordered">
+                     <thead>
+                        <tr>
+                           <th scope="col">No</th>
+                           <th scope="col">Nom de la société</th>
+                           <th scope="col">SIREN</th>
+
+                           <th scope="col">Actions</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+
+                        <% for (let pas=0; pas < sess_docList.length; pas++) { %>
+                           <% if(sess_docList[pas]['Usable']=="True" ){ %>
+                              <tr>
+                                 <th scope="row">
+                                    <%- pas %>
+                                 </th>
+                                 <td>
+                                    <%- sess_docList[pas]['Name'] %>
+                                 </td>
+                                 <td>
+                                    <%- sess_docList[pas]['Author'] %>
+                                 </td>
+                                 <td>
+                                    <a href="/roleEdit/<%= sess_docList[pas]['_id'] %>"><button class="btn btn-success"><i class="fas fa-edit"></i></button></a>
+                                    <a href="/roleDel/<%= sess_docList[pas]['_id'] %>"><button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button></a>
+                                 </td>
+                              </tr>
+                              <% }} %>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+   </body>
+<%- include('partials/additionalCss'); %>
+</html>

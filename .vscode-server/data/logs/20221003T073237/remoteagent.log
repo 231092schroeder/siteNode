@@ -1,0 +1,106 @@
+[2022-10-03 07:32:37.553] [remoteagent] [info] Extension host agent started.
+[2022-10-03 07:32:44.608] [remoteagent] [info] [127.0.0.1][8ba596d3][ManagementConnection] New connection established.
+[2022-10-03 07:32:45.145] [remoteagent] [info] [127.0.0.1][689a7e91][ExtensionHostConnection] New connection established.
+[2022-10-03 07:32:45.154] [remoteagent] [info] [127.0.0.1][689a7e91][ExtensionHostConnection] <39511> Launched Extension Host Process.
+[2022-10-03 07:32:55.734] [remoteagent] [error] ["CodeExpectedError: Could not find pty on pty host","    at c._throwIfNoPty (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:23:36316)","    at c.updateIcon (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:23:32124)","    at Object.call (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:16:8386)","    at u.onPromise (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:15:5851)","    at u.onRawMessage (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:15:5234)","    at /home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:15:4520","    at p.invoke (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:11:145)","    at D.deliver (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:11:2275)","    at T.fire (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:11:1853)","    at process.Q (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:9:20703)","    at process.emit (node:events:526:28)","    at emit (node:internal/child_process:938:14)","    at processTicksAndRejections (node:internal/process/task_queues:84:21)"]
+[2022-10-03 07:32:55.735] [remoteagent] [error] ["CodeExpectedError: Could not find pty on pty host","    at c._throwIfNoPty (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:23:36316)","    at c.updateTitle (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:23:32064)","    at Object.call (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:16:8386)","    at u.onPromise (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:15:5851)","    at u.onRawMessage (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:15:5234)","    at /home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:15:4520","    at p.invoke (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:11:145)","    at D.deliver (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:11:2275)","    at T.fire (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:11:1853)","    at process.Q (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:9:20703)","    at process.emit (node:events:526:28)","    at emit (node:internal/child_process:938:14)","    at processTicksAndRejections (node:internal/process/task_queues:84:21)"]
+[2022-10-03 07:50:29.719] [remoteagent] [info] [127.0.0.1][6f7a4648][ManagementConnection] New connection established.
+[2022-10-03 07:50:29.752] [remoteagent] [info] [127.0.0.1][ddd2c29c][ExtensionHostConnection] New connection established.
+[2022-10-03 07:50:29.782] [remoteagent] [info] [127.0.0.1][ddd2c29c][ExtensionHostConnection] <39779> Launched Extension Host Process.
+[2022-10-03 07:50:32.284] [remoteagent] [error] ["CodeExpectedError: Could not find pty on pty host","    at c._throwIfNoPty (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:23:36316)","    at c.updateTitle (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:23:32064)","    at Object.call (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:16:8386)","    at u.onPromise (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:15:5851)","    at u.onRawMessage (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:15:5234)","    at /home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:15:4520","    at p.invoke (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:11:145)","    at D.deliver (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:11:2275)","    at T.fire (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:11:1853)","    at process.Q (/home/ubuntu/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/platform/terminal/node/ptyHostMain.js:9:20703)","    at process.emit (node:events:526:28)","    at emit (node:internal/child_process:938:14)","    at processTicksAndRejections (node:internal/process/task_queues:84:21)"]
+[2022-10-03 07:50:49.888] [remoteagent] [info] [127.0.0.1][6f7a4648][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2022-10-03 07:50:49.924] [remoteagent] [info] [127.0.0.1][ddd2c29c][ExtensionHostConnection] <39779> Extension Host Process exited with code: 0, signal: null.
+[2022-10-03 07:50:53.740] [remoteagent] [info] [127.0.0.1][2735c7e4][ManagementConnection] New connection established.
+[2022-10-03 07:50:53.791] [remoteagent] [info] [127.0.0.1][b039393a][ExtensionHostConnection] New connection established.
+[2022-10-03 07:50:53.805] [remoteagent] [info] [127.0.0.1][b039393a][ExtensionHostConnection] <39968> Launched Extension Host Process.
+[2022-10-03 07:50:55.843] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 144
+[2022-10-03 07:50:55.843] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 145
+[2022-10-03 07:50:55.850] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 146
+[2022-10-03 07:50:55.850] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 147
+[2022-10-03 07:50:55.922] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 148
+[2022-10-03 07:50:55.922] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 149
+[2022-10-03 07:50:55.936] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 150
+[2022-10-03 07:50:55.936] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 151
+[2022-10-03 07:50:55.943] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 152
+[2022-10-03 07:50:55.943] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 153
+[2022-10-03 07:50:55.950] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 154
+[2022-10-03 07:50:55.950] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 155
+[2022-10-03 07:50:55.950] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 156
+[2022-10-03 07:50:55.950] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 157
+[2022-10-03 07:50:55.954] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 158
+[2022-10-03 07:50:55.954] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 159
+[2022-10-03 07:50:55.954] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 160
+[2022-10-03 07:50:55.954] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 161
+[2022-10-03 07:50:55.966] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 162
+[2022-10-03 07:50:55.967] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 163
+[2022-10-03 07:50:55.967] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 164
+[2022-10-03 07:50:55.967] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 165
+[2022-10-03 07:50:55.968] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 166
+[2022-10-03 07:50:55.968] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 167
+[2022-10-03 07:50:55.968] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 168
+[2022-10-03 07:50:55.968] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 169
+[2022-10-03 07:50:56.671] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 170
+[2022-10-03 07:50:56.672] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 171
+[2022-10-03 07:50:56.681] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 172
+[2022-10-03 07:50:56.682] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 173
+[2022-10-03 07:50:56.682] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 174
+[2022-10-03 07:50:56.702] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 175
+[2022-10-03 07:50:56.702] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 176
+[2022-10-03 07:50:56.755] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 177
+[2022-10-03 07:50:56.756] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 178
+[2022-10-03 07:50:56.756] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 179
+[2022-10-03 07:50:56.776] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 180
+[2022-10-03 07:50:56.776] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 181
+[2022-10-03 07:50:56.777] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 182
+[2022-10-03 07:50:57.512] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 183
+[2022-10-03 07:50:57.559] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 184
+[2022-10-03 07:50:57.559] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 185
+[2022-10-03 07:50:57.591] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 186
+[2022-10-03 07:50:57.592] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 187
+[2022-10-03 07:50:57.593] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 188
+[2022-10-03 07:50:57.594] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 189
+[2022-10-03 07:50:57.594] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 190
+[2022-10-03 07:50:57.595] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 191
+[2022-10-03 07:50:57.595] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 192
+[2022-10-03 07:50:57.595] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 193
+[2022-10-03 07:50:57.596] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 194
+[2022-10-03 07:50:57.596] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 195
+[2022-10-03 07:57:18.392] [remoteagent] [error] [File Watcher (universal)] restarting watcher after error: terminated by itself with code null, signal: SIGSEGV
+[2022-10-03 07:57:34.952] [remoteagent] [error] [File Watcher (parcel)] Unexpected error: std::bad_alloc (EUNKNOWN) (path: /home/ubuntu)
+[2022-10-03 07:57:34.952] [remoteagent] [error] [File Watcher (universal)] restarting watcher after error: std::bad_alloc
+[2022-10-03 07:57:35.133] [remoteagent] [error] [File Watcher (universal)] restarting watcher after error: terminated by itself with code null, signal: SIGSEGV
+[2022-10-03 07:57:51.654] [remoteagent] [error] [File Watcher (parcel)] Unexpected error: std::bad_alloc (EUNKNOWN) (path: /home/ubuntu)
+[2022-10-03 07:57:51.654] [remoteagent] [error] [File Watcher (universal)] restarting watcher after error: std::bad_alloc
+[2022-10-03 07:57:51.655] [remoteagent] [error] [File Watcher (parcel)] Unexpected error: std::bad_alloc (EUNKNOWN) (path: /home/ubuntu)
+[2022-10-03 07:57:51.656] [remoteagent] [error] [File Watcher (universal)] restarting watcher after error: std::bad_alloc
+[2022-10-03 07:58:06.205] [remoteagent] [error] [File Watcher (parcel)] Unexpected error: std::bad_alloc (EUNKNOWN) (path: /home/ubuntu)
+[2022-10-03 07:58:06.205] [remoteagent] [error] [File Watcher (universal)] restarting watcher after error: std::bad_alloc
+[2022-10-03 07:58:06.206] [remoteagent] [error] [File Watcher (parcel)] Unexpected error: std::bad_alloc (EUNKNOWN) (path: /home/ubuntu)
+[2022-10-03 07:58:06.206] [remoteagent] [error] [File Watcher (universal)] restarting watcher after error: std::bad_alloc
+[2022-10-03 08:00:57.487] [remoteagent] [error] [File Watcher (parcel)] Unexpected error: std::bad_alloc (EUNKNOWN) (path: /home/ubuntu)
+[2022-10-03 08:00:57.487] [remoteagent] [error] [File Watcher (universal)] restarting watcher after error: std::bad_alloc
+[2022-10-03 08:00:57.488] [remoteagent] [error] [File Watcher (parcel)] Unexpected error: std::bad_alloc (EUNKNOWN) (path: /home/ubuntu)
+[2022-10-03 08:00:57.488] [remoteagent] [error] [File Watcher (universal)] restarting watcher after error: std::bad_alloc
+[2022-10-03 08:03:49.978] [remoteagent] [error] [File Watcher (parcel)] Unexpected error: std::bad_alloc (EUNKNOWN) (path: /home/ubuntu)
+[2022-10-03 08:03:49.978] [remoteagent] [error] [File Watcher (universal)] restarting watcher after error: std::bad_alloc
+[2022-10-03 08:03:49.982] [remoteagent] [error] [File Watcher (parcel)] Unexpected error: std::bad_alloc (EUNKNOWN) (path: /home/ubuntu)
+[2022-10-03 08:03:49.982] [remoteagent] [error] [File Watcher (universal)] gave up attempting to restart watcher after error: std::bad_alloc
+[2022-10-03 08:11:14.437] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 196
+[2022-10-03 08:11:14.460] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 197
+[2022-10-03 08:11:14.474] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 198
+[2022-10-03 08:11:14.496] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 199
+[2022-10-03 08:11:14.531] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 200
+[2022-10-03 08:11:14.549] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 201
+[2022-10-03 08:11:14.564] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 202
+[2022-10-03 08:11:14.588] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 203
+[2022-10-03 08:11:14.629] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 204
+[2022-10-03 08:11:14.644] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 205
+[2022-10-03 08:11:14.704] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 206
+[2022-10-03 08:11:14.705] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 207
+[2022-10-03 08:11:14.723] [remoteagent] [warning] RequestStore#acceptReply was called without receiving a matching request 208
+[2022-10-03 08:13:07.576] [remoteagent] [info] [127.0.0.1][8ba596d3][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2022-10-03 08:13:07.637] [remoteagent] [info] [127.0.0.1][689a7e91][ExtensionHostConnection] <39511> Extension Host Process exited with code: 0, signal: null.
+[2022-10-03 18:24:18.679] [remoteagent] [info] [127.0.0.1][2735c7e4][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2022-10-03 18:24:18.789] [remoteagent] [info] [127.0.0.1][b039393a][ExtensionHostConnection] <39968> Extension Host Process exited with code: 0, signal: null.
+[2022-10-03 18:24:18.789] [remoteagent] [info] Last EH closed, waiting before shutting down
+[2022-10-03 18:29:18.802] [remoteagent] [info] Last EH closed, shutting down

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="fr-FR">
+
+<head>
+   <title>Accueil - DOMAP</title>
+   <%- include('partials/dependencies'); %>
+</head>
+<% 
+arr = sess_docListProduct;
+
+
+function multiDimensionalUnique(arr) {
+
+   var uniques = [];
+   var itemsFound = [];
+
+   for(var i = 0, l = arr.length; i < l; i++) {
+
+       var stringified = JSON.stringify(arr[i]["PRODUCT_NC"]);
+    
+       if(itemsFound[stringified]) { 
+   
+           const index = uniques.map(object => object.PRODUCT_NC).indexOf(arr[i]['PRODUCT_NC']);
+
+           //AJOUTER AUTANT DE VALEURS QUE NECESSAIRE
+
+           //VALEUR EN EUROS 
+           uniques[index]["VALUE_IN_EUROS"] = parseInt(uniques[index]["VALUE_IN_EUROS"])
+           arr[i]['VALUE_IN_EUROS'] = parseInt(arr[i]['VALUE_IN_EUROS'])
+          
+           //QUANTITE KILO
+           uniques[index]["QUANTITY_IN_KG"] = parseInt(uniques[index]["QUANTITY_IN_KG"])
+           arr[i]['QUANTITY_IN_KG'] = parseInt(arr[i]['QUANTITY_IN_KG'])
+
+           //VALEUR IN EURO ON QTY IN KG
+           uniques[index]["VALUE_IN_EUROS_ON_QUANTITY_IN_KG"] = parseFloat(uniques[index]["VALUE_IN_EUROS_ON_QUANTITY_IN_KG"])
+           arr[i]['VALUE_IN_EUROS_ON_QUANTITY_IN_KG'] = parseFloat(arr[i]['VALUE_IN_EUROS_ON_QUANTITY_IN_KG'])
+
+
+           //ADDITION
+           uniques[index]["VALUE_IN_EUROS"] += arr[i]['VALUE_IN_EUROS']
+           uniques[index]["QUANTITY_IN_KG"] += arr[i]['QUANTITY_IN_KG']
+           uniques[index]["VALUE_IN_EUROS_ON_QUANTITY_IN_KG"] == arr[i]['VALUE_IN_EUROS']/arr[i]['QUANTITY_IN_KG']
+           continue
+       } 
+
+
+       uniques.push(arr[i]);
+
+       itemsFound[stringified] = true;
+   }
+   return uniques;
+}
+console.log(multiDimensionalUnique(arr))
+%>
+
+<body>
+   <%- include('partials/navbarProduct'); %>
+      <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5">
+         <div class="parent">
+            <div class="div1"><canvas id="myChart" style="width:100%;max-width:900px"></canvas> </div>
+            <div class="div2"> </div>
+            <div class="div3"> </div>
+            <div class="div4"> </div>
+            </div> 
+  
+      </div>
+      </div>
+      </div>
+      </div>
+</body>
+<script>
+   var myChart = new Chart("myChart", {
+  type: "line",
+  data: {
+      labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+      datasets: [
+        {
+          label: "Population (millions)",
+          data: [2478,5267,734,784,433]
+        }
+      ]
+    },
+  options: {}
+});
+
+   </script>
+   <style>
+      .parent {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.div1 { grid-area: 2 / 2 / 4 / 4; }
+.div2 { grid-area: 2 / 4 / 4 / 6; }
+.div3 { grid-area: 4 / 2 / 6 / 4; }
+.div4 { grid-area: 4 / 4 / 6 / 6; } 
+   </style>
+<%- include('partials/additionalCss'); %>
+
+</html>

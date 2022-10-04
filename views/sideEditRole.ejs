@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr-FR">
+
+<head>
+   <title>Accueil - DOMAP</title>
+   <%- include('partials/dependencies'); %>
+</head>
+
+                  
+<body>
+   <%- include('partials/navbar'); %>
+      <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5">
+         <div class="row" style="margin-top: 50px;">
+         <div class="col-md-12 text-center">
+            <div class="outer-form">
+               <form action="/configEditRole/<%- sess_docListRole[0]['_id'] %>" method="POST">
+               <table class="table-striped table table-bordered vertical">
+                  <thead style="color: rgb(255, 255, 255); font-weight: normal; background-color:#10707f;">
+                     <tr>
+                        <th class="head">No</th>
+                        <th class="head">Nom</th>
+                        <th class="head">Description</th>
+                        <th class="head">Status</th>
+                     </tr>
+                  </thead>
+
+                  <tbody style="border:1px solid transparent; background-color:#CAF0F8; color:#000000; text-align: center;">
+                     <tr>
+                        <td style="padding: 14px;">01</td>
+                        <td>Accès aux produit</td>
+                        <td>Permet d'accéder à tout les produits</td>
+
+                        <td>
+                           <label class="switch">
+                              <input type="checkbox" name="PermsProd" id="PermsProd" checked>
+                              <span class="slider round"></span>
+                           </label>
+                        </td>
+                     </tr>
+
+                     <tr>
+                        <td style="padding: 14px;">02</td>
+                        <td>Accès a la gestion utilisateur</td>
+                        <td>Permet d'accéder à la gestion de tout les utilisateur</td>
+
+                        <td>
+                           <label class="switch">
+                              <input type="checkbox" name="PermsUser" id="PermsUser" checked>
+                              <span class="slider round"></span>
+                           </label>
+                        </td>
+                     </tr>
+
+                     <tr>
+                        <td style="padding: 14px;">03</td>
+                        <td>Accès a la gestion des roles</td>
+                        <td>Permet d'accéder à la gestion de tout les roles et même d'en créer de nouveau</td>
+
+                        <td>
+                           <label class="switch">
+                              <input type="checkbox" name="PermsRole" id="PermsRole" checked >
+                              <span class="slider round"></span>
+                           </label>
+                        </td>
+                     </tr>
+
+                  </tbody>
+               </table>
+            </div>
+            <button type="submit" class="btn btn-primary" >
+               Confirmer
+            </button>
+            </form>
+         </div>
+      </div>
+      </div>
+   </div>
+</body>
+
+<%- include('partials/additionalCss'); %>
+</html>

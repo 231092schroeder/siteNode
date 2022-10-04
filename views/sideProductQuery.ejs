@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fr-FR">
+
+<head>
+   <title>Accueil - DOMAP</title>
+   <%- include('partials/dependencies'); %>
+</head>
+
+
+<body>
+   <%- include('partials/navbarProduct'); %>
+      <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5">
+         <div class="row">
+            <div class="col-12">
+               <table class="table table-bordered">
+                  <thead>
+                     <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Product NC8</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Nom du produit</th>
+                        <th scope="col">Prix euro/unité (L ou Kg)</th>
+                        <th scope="col">Valeurs en euro</th>
+                        <th scope="col">Quantité par unité (L ou Kg)</th>
+                        <th scope="col">Actions</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                                
+                     <% 
+                           arr = sess_docListProduct;
+                  
+
+                           function multiDimensionalUnique(arr) {
+
+                              var uniques = [];
+                              var itemsFound = [];
+                          
+                              for(var i = 0, l = arr.length; i < l; i++) {
+                          
+                                  var stringified = JSON.stringify(arr[i]["PRODUCT_NC"]);
+                               
+                                  if(itemsFound[stringified]) { 
+                              
+                                      const index = uniques.map(object => object.PRODUCT_NC).indexOf(arr[i]['PRODUCT_NC']);
+                          
+                                      //AJOUTER AUTANT DE VALEURS QUE NECESSAIRE
+
+                                      //VALEUR EN EUROS 
+                                      uniques[index]["VALUE_IN_EUROS"] = parseInt(uniques[index]["VALUE_IN_EUROS"])
+                                      arr[i]['VALUE_IN_EUROS'] = parseInt(arr[i]['VALUE_IN_EUROS'])
+                                     
+                                      //QUANTITE KILO
+                                      uniques[index]["QUANTITY_IN_KG"] = parseInt(uniques[index]["QUANTITY_IN_KG"])
+                                      arr[i]['QUANTITY_IN_KG'] = parseInt(arr[i]['QUANTITY_IN_KG'])
+
+                                      //VALEUR IN EURO ON QTY IN KG
+                                      uniques[index]["VALUE_IN_EUROS_ON_QUANTITY_IN_KG"] = parseFloat(uniques[index]["VALUE_IN_EUROS_ON_QUANTITY_IN_KG"])
+                                      arr[i]['VALUE_IN_EUROS_ON_QUANTITY_IN_KG'] = parseFloat(arr[i]['VALUE_IN_EUROS_ON_QUANTITY_IN_KG'])
+
+
+                                      //ADDITION
+                                      uniques[index]["VALUE_IN_EUROS"] += arr[i]['VALUE_IN_EUROS']
+                                      uniques[index]["QUANTITY_IN_KG"] += arr[i]['QUANTITY_IN_KG']
+                                      uniques[index]["VALUE_IN_EUROS_ON_QUANTITY_IN_KG"] == arr[i]['VALUE_IN_EUROS']/arr[i]['QUANTITY_IN_KG']
+                                      continue
+                                  } 
+                          
+                          
+                                  uniques.push(arr[i]);
+                          
+                                  itemsFound[stringified] = true;
+                              }
+                              return uniques;
+                          }
+                          console.log(multiDimensionalUnique(arr))
+                      %>
+
+                     <% for (let pas = 0; pas < multiDimensionalUnique(arr).length; pas++) { %>
+                     <tr>
+                        <th scope="row">
+                          <%- pas %>
+                        </th>
+                        <td>
+                          <%- multiDimensionalUnique(arr)[pas]['PRODUCT_NC'] %>
+                        </td>
+                        <td>
+                           <%- multiDimensionalUnique(arr)[pas]['PERIOD'] %>
+                        </td>
+                        <td>
+                           
+                        </td>
+                        <td>
+                           <%-  Math.round(multiDimensionalUnique(arr)[pas]["VALUE_IN_EUROS_ON_QUANTITY_IN_KG"] * 100) / 100  %>
+                        </td>
+                        <td>
+                           <%-  multiDimensionalUnique(arr)[pas]["VALUE_IN_EUROS"] %>
+                         </td>
+                         <td>
+                          <%- multiDimensionalUnique(arr)[pas]['QUANTITY_IN_KG'] %>
+                         </td>
+
+                        <td>
+                           <a href="/ProductDetailsNC8/<%- multiDimensionalUnique(arr)[pas]['PERIOD'] %>/<%- multiDimensionalUnique(arr)[pas]['PRODUCT_NC'] %>"><button class="btn btn-success"><i class="fa fa-eye"></i></button></a> 
+                           <a href=""><button type="button" class="btn btn-danger"><i class="fa fa-exclamation"></i></button></a>
+                        </td>
+
+                     </tr>
+                     <% } %>
+                  <!-- FAIT QUELQUE CHOSE-->
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+      </div>
+</body>
+
+<%- include('partials/additionalCss'); %>
+
+</html>
